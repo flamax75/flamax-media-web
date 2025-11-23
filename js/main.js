@@ -10,7 +10,7 @@ menuBtn.addEventListener("click", () => {
   menuBtn.setAttribute("aria-expanded", isOpen);
 });
 
-// Cerrar menú al hacer click en un enlace (móvil)
+// Cerrar menú al pulsar enlaces (móvil)
 navLinks.querySelectorAll("a").forEach(link => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("open");
