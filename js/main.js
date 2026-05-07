@@ -10,11 +10,10 @@ menuBtn.addEventListener("click", () => {
   menuBtn.setAttribute("aria-expanded", isOpen);
 });
 
-// Cerrar menú al pulsar enlaces (móvil)
-navLinks.querySelectorAll("a").forEach(link => {
+// Cerrar menú al pulsar enlaces en móvil
+navLinks.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("open");
     menuBtn.setAttribute("aria-expanded", "false");
   });
 });
-
