@@ -1,16 +1,14 @@
-// Año automático en el footer
-document.getElementById("year").textContent = new Date().getFullYear();
-
-// Menú hamburguesa móvil
+const year = document.getElementById("year");
 const menuBtn = document.querySelector(".menu-btn");
 const navLinks = document.getElementById("navLinks");
 
+year.textContent = new Date().getFullYear();
+
 menuBtn.addEventListener("click", () => {
   const isOpen = navLinks.classList.toggle("open");
-  menuBtn.setAttribute("aria-expanded", isOpen);
+  menuBtn.setAttribute("aria-expanded", String(isOpen));
 });
 
-// Cerrar menú al pulsar enlaces en móvil
 navLinks.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("open");
