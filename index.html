@@ -3,29 +3,33 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Flamax Media | Vídeos y publicidad para negocios</title>
-  <meta name="description" content="Flamax Media crea vídeos publicitarios, campañas visuales y contenido para redes sociales.">
+  <title>Flamax Media | Paginas web, redes sociales y publicidad</title>
+  <meta name="description" content="Flamax Media crea paginas web estaticas y dinamicas, gestiona redes sociales, disena carteles publicitarios y promociona eventos.">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
   <header class="site-header">
-    <nav class="nav" aria-label="Navegación principal">
+    <nav class="nav" aria-label="Navegacion principal" data-i18n-aria-label="nav.label">
       <a class="brand" href="#inicio">
         <img src="assets/img/logo.png" alt="Flamax Media">
         <span>Flamax Media</span>
       </a>
 
-      <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
-        ☰
+      <button class="menu-btn" type="button" aria-label="Abrir menu" data-i18n-aria-label="nav.menu" aria-expanded="false" aria-controls="navLinks">
+        Menu
       </button>
 
       <div class="nav-links" id="navLinks">
-        <a href="#servicios">Servicios</a>
-        <a href="#packs">Packs</a>
-        <a href="#muestras">Muestras</a>
-        <a href="#contacto" class="nav-button">Contactar</a>
+        <a href="#servicios" data-i18n="nav.services">Servicios</a>
+        <a href="#portfolios" data-i18n="nav.portfolios">Portfolios</a>
+        <a href="#empresa" data-i18n="nav.company">Empresa</a>
+        <a href="#contacto" class="nav-button" data-i18n="nav.contact">Contactar</a>
+        <div class="language-switch" aria-label="Elegir idioma" data-i18n-aria-label="nav.language">
+          <button class="language-btn active" type="button" data-lang="es">ES</button>
+          <button class="language-btn" type="button" data-lang="en">EN</button>
+        </div>
       </div>
     </nav>
   </header>
@@ -33,152 +37,120 @@
   <main id="inicio">
     <section class="hero section">
       <div class="hero-copy">
-        <p class="kicker">Publicidad visual para negocios locales</p>
-        <h1>Vídeos que hacen que tu negocio se vea más profesional.</h1>
-        <p class="lead">
-          Creamos vídeos cortos, carteles y campañas para redes sociales con una estética clara, moderna y lista para vender.
+        <p class="kicker" data-i18n="hero.kicker">Web, redes y publicidad</p>
+        <h1 data-i18n="hero.title">Hacemos que tu proyecto tenga presencia online y visual.</h1>
+        <p class="lead" data-i18n="hero.lead">
+          Creamos paginas web estaticas y dinamicas, llevamos redes sociales, disenamos carteles publicitarios y promocionamos eventos.
+          Tambien creamos redes y desarrollamos cualquier idea digital que nos pidas.
         </p>
 
         <div class="hero-actions">
-          <a class="button primary" href="https://wa.me/34635082377">Pedir propuesta</a>
-          <a class="button secondary" href="#muestras">Ver trabajos</a>
+          <a class="button primary" href="https://wa.me/34635082377" data-i18n="hero.cta">Pedir propuesta</a>
+          <a class="button secondary" href="#portfolios" data-i18n="hero.portfolios">Ver portfolios</a>
         </div>
       </div>
 
-      <aside class="hero-panel" aria-label="Vídeo destacado">
-        <div class="logo-card">
+      <aside class="hero-panel" aria-label="Resumen de Flamax Media" data-i18n-aria-label="hero.summaryLabel">
+        <div class="logo-card large">
           <img src="assets/img/logo.png" alt="Flamax Media">
           <div>
             <strong>Flamax Media</strong>
-            <span>Contenido, campañas y redes</span>
+            <span data-i18n="hero.card">Paginas web, redes sociales, carteles y promocion de eventos.</span>
           </div>
         </div>
 
-        <div class="main-video">
-          <iframe
-            src="https://www.youtube.com/embed/Mzn38BR70GU"
-            title="Flamax Media - La importancia de la publicidad"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
+        <div class="quick-list">
+          <p data-i18n="hero.item1">Webs estaticas y dinamicas</p>
+          <p data-i18n="hero.item2">Gestion y creacion de redes sociales</p>
+          <p data-i18n="hero.item3">Carteles publicitarios y material promocional</p>
+          <p data-i18n="hero.item4">Promocion de eventos y proyectos especiales</p>
         </div>
       </aside>
     </section>
 
     <section id="servicios" class="section">
       <div class="section-title">
-        <p class="kicker">Servicios</p>
-        <h2>Todo lo necesario para que tu marca tenga presencia.</h2>
+        <p class="kicker" data-i18n="services.kicker">Servicios</p>
+        <h2 data-i18n="services.title">Soluciones sencillas para negocios, eventos y proyectos.</h2>
       </div>
 
       <div class="cards services">
         <article class="card">
           <span>01</span>
-          <h3>Vídeos publicitarios</h3>
-          <p>Reels, TikTok y Shorts editados con ritmo, mensaje claro y formato profesional.</p>
+          <h3 data-i18n="services.webTitle">Paginas web</h3>
+          <p data-i18n="services.webText">Disenamos paginas estaticas y dinamicas para presentar negocios, servicios, eventos o proyectos personales.</p>
         </article>
 
         <article class="card">
           <span>02</span>
-          <h3>Diseño para campañas</h3>
-          <p>Carteles, stories y piezas visuales para ofertas, eventos y promociones.</p>
+          <h3 data-i18n="services.socialTitle">Redes sociales</h3>
+          <p data-i18n="services.socialText">Creamos y llevamos redes sociales para que tu marca tenga actividad, imagen clara y comunicacion constante.</p>
         </article>
 
         <article class="card">
           <span>03</span>
-          <h3>Identidad visual</h3>
-          <p>Logo, colores y estilo para que tu negocio se reconozca al instante.</p>
+          <h3 data-i18n="services.postersTitle">Carteles publicitarios</h3>
+          <p data-i18n="services.postersText">Preparamos carteles, piezas promocionales y material visual para ofertas, campanas y anuncios.</p>
         </article>
 
         <article class="card">
           <span>04</span>
-          <h3>Gestión de redes</h3>
-          <p>Contenido planificado para mantener tus redes activas sin improvisar.</p>
+          <h3 data-i18n="services.eventsTitle">Promocion de eventos</h3>
+          <p data-i18n="services.eventsText">Ayudamos a dar visibilidad a eventos, proyectos y negocios con contenido, redes y presencia online.</p>
         </article>
       </div>
     </section>
 
-    <section id="packs" class="section">
+    <section id="portfolios" class="section">
       <div class="section-title centered">
-        <p class="kicker">Packs Flamax Media</p>
-        <h2>Elige una acción puntual o una campaña completa.</h2>
+        <p class="kicker" data-i18n="portfolio.kicker">Portfolios</p>
+        <h2 data-i18n="portfolio.title">Algunos proyectos y trabajos de referencia.</h2>
       </div>
 
-      <div class="cards packs">
-        <article class="pack">
-          <p class="tag">Inicio</p>
-          <h3>Vídeo Único</h3>
-          <p>Una pieza profesional lista para publicar en redes.</p>
-          <a href="mailto:flamaxmedia@gmail.com?subject=Pack%20Vídeo%20Único">Consultar pack</a>
+      <div class="cards portfolios">
+        <article class="portfolio-card">
+          <p class="tag" data-i18n="portfolio.transylvaniaTag">Proyecto cultural</p>
+          <h3 data-i18n="portfolio.transylvaniaTitle">Sueno de Transilvania</h3>
+          <p data-i18n="portfolio.transylvaniaText">Proyecto creado por Flaviu Maxim Capalnas.</p>
+          <a href="https://suenodetransilvania.com" target="_blank" rel="noopener">suenodetransilvania.com</a>
         </article>
 
-        <article class="pack featured">
-          <p class="tag">Recomendado</p>
-          <h3>Campaña Mensual</h3>
-          <p>4 vídeos + 4 carteles, con publicación y seguimiento.</p>
-          <a href="https://wa.me/34635082377">Quiero este pack</a>
-        </article>
-
-        <article class="pack">
-          <p class="tag">Completo</p>
-          <h3>Control Total</h3>
-          <p>Identidad, redes y contenido semanal durante el año.</p>
-          <a href="mailto:flamaxmedia@gmail.com?subject=Pack%20Control%20Total">Consultar pack</a>
+        <article class="portfolio-card">
+          <p class="tag" data-i18n="portfolio.dreamTag">Proyecto web</p>
+          <h3>Dream Bouw Group</h3>
+          <p data-i18n="portfolio.dreamText">Portfolio y presencia digital para mostrar servicios y actividad profesional.</p>
+          <a href="https://dreambouwgroup.com" target="_blank" rel="noopener">dreambouwgroup.com</a>
         </article>
       </div>
     </section>
 
-    <section id="muestras" class="section">
-      <div class="section-title">
-        <p class="kicker">Muestras</p>
-        <h2>Vídeos reales preparados para redes sociales.</h2>
+    <section id="empresa" class="section about">
+      <div>
+        <p class="kicker" data-i18n="company.kicker">Empresa</p>
+        <h2 data-i18n="company.title">Flamax Media es la empresa de Flaviu Maxim Capalnas.</h2>
       </div>
 
-      <div class="samples">
-        <div class="sample-video">
-          <iframe
-            src="https://www.youtube.com/embed/3R95l_3xNEY"
-            title="Muestra 1 Flamax Media"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-        <div class="sample-video">
-          <iframe
-            src="https://www.youtube.com/embed/10mIrgsIIgg"
-            title="Muestra 2 Flamax Media"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-        <div class="sample-video">
-          <iframe
-            src="https://www.youtube.com/embed/7oyH1kh8fSA"
-            title="Muestra 3 Flamax Media"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
+      <p data-i18n="company.text">
+        Flaviu Maxim Capalnas es el creador del proyecto Sueno de Transilvania y trabaja en soluciones digitales,
+        promocion, redes sociales, paginas web y material publicitario para personas, negocios y eventos.
+      </p>
     </section>
 
     <section id="contacto" class="section contact">
       <div>
-        <p class="kicker">Contacto</p>
-        <h2>Cuéntame qué quieres vender y lo convertimos en contenido.</h2>
+        <p class="kicker" data-i18n="contact.kicker">Contacto</p>
+        <h2 data-i18n="contact.title">Cuentanos que necesitas y buscamos la forma de hacerlo.</h2>
       </div>
 
       <div class="contact-actions">
-        <a class="button primary" href="https://wa.me/34635082377">WhatsApp</a>
+        <a class="button primary" href="https://wa.me/34635082377" data-i18n="contact.whatsapp">WhatsApp</a>
         <a class="button secondary" href="mailto:flamaxmedia@gmail.com">flamaxmedia@gmail.com</a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© <span id="year"></span> Flamax Media. Todos los derechos reservados.</p>
+    <p>&copy; <span id="year"></span> Flamax Media. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
   </footer>
 
   <script src="js/main.js"></script>
