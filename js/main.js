@@ -158,6 +158,28 @@ const translations = {
 
 year.textContent = new Date().getFullYear();
 
+function animateMainTitles() {
+  document.querySelectorAll(".word-animate[data-i18n]").forEach((title) => {
+    const text = title.textContent.trim();
+    title.setAttribute("aria-label", text);
+    title.classList.add("is-word-animated");
+    title.replaceChildren();
+
+    text.split(/\s+/).forEach((word, index, words) => {
+      const span = document.createElement("span");
+      span.className = `title-word title-word-${(index % 4) + 1}`;
+      span.style.setProperty("--word-index", index);
+      span.setAttribute("aria-hidden", "true");
+      span.textContent = word;
+      title.appendChild(span);
+
+      if (index < words.length - 1) {
+        title.appendChild(document.createTextNode(" "));
+      }
+    });
+  });
+}
+
 function setLanguage(lang) {
   const dictionary = translations[lang] || translations.es;
 
@@ -176,6 +198,8 @@ function setLanguage(lang) {
     const key = element.getAttribute("data-i18n-aria-label");
     element.setAttribute("aria-label", dictionary[key]);
   });
+
+  animateMainTitles();
 
   languageButtons.forEach((button) => {
     const isActive = button.dataset.lang === lang;
