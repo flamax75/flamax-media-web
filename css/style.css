@@ -20,11 +20,13 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
 }
 
 body {
+  min-height: 100vh;
   margin: 0;
+  display: flex;
+  flex-direction: column;
   overflow-x: hidden;
   color: var(--ink);
   background: var(--bg);
@@ -41,6 +43,10 @@ body::before {
     linear-gradient(rgba(21, 20, 18, .035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(21, 20, 18, .035) 1px, transparent 1px);
   background-size: 38px 38px;
+}
+
+main {
+  flex: 1;
 }
 
 a {
@@ -139,6 +145,7 @@ p {
 }
 
 .nav-links a:hover,
+.nav-links a.current,
 .nav-button {
   color: var(--ink);
   background: rgba(255, 79, 31, .12);
@@ -174,10 +181,9 @@ p {
 .section {
   width: 100%;
   margin: 0 auto;
-  min-height: calc(100vh - 68px);
-  padding: 96px max(18px, calc((100vw - var(--max)) / 2));
+  min-height: calc(100vh - 140px);
+  padding: 72px max(18px, calc((100vw - var(--max)) / 2));
   scroll-margin-top: 68px;
-  scroll-snap-align: start;
 }
 
 .hero {
@@ -446,6 +452,20 @@ h3 {
   gap: 28px;
 }
 
+.services-page {
+  display: grid;
+  align-content: center;
+  gap: 34px;
+}
+
+.services-page .split-intro {
+  align-items: end;
+}
+
+.services-page .lead {
+  margin-bottom: 0;
+}
+
 .split-intro > p {
   max-width: 520px;
   font-size: 1.08rem;
@@ -589,10 +609,6 @@ h3 {
 }
 
 .contact {
-  gap: 22px;
-}
-
-.contact {
   margin-bottom: 0;
   display: grid;
   gap: 28px;
@@ -617,18 +633,14 @@ h3 {
 }
 
 .footer {
+  margin-top: auto;
   padding: 26px 18px;
   border-top: 1px solid var(--line);
   color: var(--muted);
   text-align: center;
-  scroll-snap-align: end;
 }
 
 @media (max-height: 700px) {
-  html {
-    scroll-snap-type: none;
-  }
-
   .section {
     min-height: auto;
   }

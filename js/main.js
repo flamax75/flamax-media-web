@@ -7,6 +7,16 @@ const translations = {
   es: {
     "meta.title": "Flamax Media | Paginas web, redes sociales y publicidad",
     "meta.description": "Flamax Media crea paginas web estaticas y dinamicas, gestiona redes sociales, disena carteles publicitarios y promociona eventos.",
+    "meta.services.title": "Flamax Media | Servicios",
+    "meta.services.description": "Servicios de Flamax Media: paginas web, redes sociales, carteles publicitarios y promocion de eventos.",
+    "meta.method.title": "Flamax Media | Metodo",
+    "meta.method.description": "Metodo de trabajo de Flamax Media para ordenar, disenar y promocionar proyectos digitales.",
+    "meta.portfolio.title": "Flamax Media | Proyectos",
+    "meta.portfolio.description": "Proyectos de Flamax Media y trabajos de referencia.",
+    "meta.company.title": "Flamax Media | Empresa",
+    "meta.company.description": "Flamax Media es la empresa de Flaviu Maxim Capalnas para soluciones digitales, promocion y publicidad.",
+    "meta.contact.title": "Flamax Media | Contacto",
+    "meta.contact.description": "Contacta con Flamax Media por WhatsApp o email para crear tu web, redes sociales o promocion.",
     "nav.services": "Servicios",
     "nav.method": "Metodo",
     "nav.portfolios": "Proyectos",
@@ -72,6 +82,16 @@ const translations = {
   en: {
     "meta.title": "Flamax Media | Websites, social media and advertising",
     "meta.description": "Flamax Media creates static and dynamic websites, manages social media, designs advertising posters and promotes events.",
+    "meta.services.title": "Flamax Media | Services",
+    "meta.services.description": "Flamax Media services: websites, social media, advertising posters and event promotion.",
+    "meta.method.title": "Flamax Media | Method",
+    "meta.method.description": "Flamax Media's working method to organize, design and promote digital projects.",
+    "meta.portfolio.title": "Flamax Media | Projects",
+    "meta.portfolio.description": "Flamax Media projects and reference work.",
+    "meta.company.title": "Flamax Media | Company",
+    "meta.company.description": "Flamax Media is Flaviu Maxim Capalnas' company for digital solutions, promotion and advertising.",
+    "meta.contact.title": "Flamax Media | Contact",
+    "meta.contact.description": "Contact Flamax Media by WhatsApp or email to create your website, social media or promotion.",
     "nav.services": "Services",
     "nav.method": "Method",
     "nav.portfolios": "Projects",
@@ -142,8 +162,10 @@ function setLanguage(lang) {
   const dictionary = translations[lang] || translations.es;
 
   document.documentElement.lang = lang;
-  document.title = dictionary["meta.title"];
-  document.querySelector("meta[name='description']").setAttribute("content", dictionary["meta.description"]);
+  const titleKey = document.body.dataset.titleKey || "meta.title";
+  const descriptionKey = document.body.dataset.descriptionKey || "meta.description";
+  document.title = dictionary[titleKey] || dictionary["meta.title"];
+  document.querySelector("meta[name='description']").setAttribute("content", dictionary[descriptionKey] || dictionary["meta.description"]);
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.getAttribute("data-i18n");
